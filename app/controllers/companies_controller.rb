@@ -10,4 +10,21 @@ class CompaniesController < ApplicationController
         render json: CompanySerializer.new(company)
     end
 
+    def create
+        company = Company.new(company_params)
+        company.energy = Energy.last
+        if company.save
+            render json: CompanySerializer.new(company)
+        else
+            render json: {error: "Could not save new company"}
+        end
+
+    end
+
+    private
+
+    def company_params
+        params.require(:company).permit(:name, :location, :description)
+    end
+
 end
