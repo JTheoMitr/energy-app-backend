@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Company.destroy_all
+Energy.destroy_all
+
 solar = Energy.create(name: 'solar')
 wind = Energy.create(name: 'wind')
 hydro = Energy.create(name: 'hydropower')
