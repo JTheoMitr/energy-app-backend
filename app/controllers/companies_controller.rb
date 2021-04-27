@@ -21,6 +21,12 @@ class CompaniesController < ApplicationController
 
     end
 
+    def destroy
+        company = Company.find(params[:id])
+        company.destroy
+        render json: {message: "COMPANY DELETED: #{company.name}"}
+    end
+
     private
 
     def company_params
