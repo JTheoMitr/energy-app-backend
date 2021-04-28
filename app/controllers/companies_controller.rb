@@ -27,6 +27,16 @@ class CompaniesController < ApplicationController
         render json: {message: "COMPANY DELETED: #{company.name}"}
     end
 
+    def update
+        company = Company.find(params[:id])
+        if company.update(company_params)
+            render json: CompanySerializer.new(company)
+        else
+            render json: {error: "Could not update company"}
+        end
+
+    end
+
     private
 
     def company_params
