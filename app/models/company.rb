@@ -4,4 +4,8 @@ class Company < ApplicationRecord
   def capitalize
     self.name.upcase
   end
+
+  def energyid
+    self.energy_id
+  end
 end

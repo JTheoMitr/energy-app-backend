@@ -3,7 +3,7 @@ class CompanySerializer
 
   belongs_to :energy
 
-  attributes :name, :location, :description, :capitalize
+  attributes :name, :location, :description, :capitalize, :energyid
 
   # attribute :name do |object|
   #   "#{object.name} Part 2"
