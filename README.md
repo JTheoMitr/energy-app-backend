@@ -1,24 +1,6 @@
-# README
+THIS IS THE SERVER-SIDE COMPANION TO THE FOLLOWING REPOSITORY:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://github.com/JTheoMitr/energy-app-frontend
 
-Things you may want to cover:
+Please see README in that repo for instructions on using the application
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
