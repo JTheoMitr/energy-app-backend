@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_033006) do
+ActiveRecord::Schema.define(version: 2021_05_02_190127) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_04_21_033006) do
     t.integer "energy_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "website"
     t.index ["energy_id"], name: "index_companies_on_energy_id"
   end
 
