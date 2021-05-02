@@ -12,7 +12,6 @@ class CompaniesController < ApplicationController
 
     def create
         company = Company.new(company_params)
-        company.energy = Energy.last
         if company.save
             render json: CompanySerializer.new(company)
         else
@@ -40,7 +39,7 @@ class CompaniesController < ApplicationController
     private
 
     def company_params
-        params.require(:company).permit(:name, :location, :description, :website)
+        params.require(:company).permit(:name, :location, :description, :website, :energy_id)
     end
 
 end
