@@ -5,6 +5,11 @@ class EnergiesController < ApplicationController
         render json: EnergySerializer.new(energies, include: [:companies])
     end
 
+    def show
+        energy = Energy.find(params[:id])
+        render json: EnergySerializer.new(energy)
+    end
+
     def create
         energy = Energy.new(energy_params)
         if energy.save
